@@ -1,0 +1,9 @@
+﻿  CLASS WORK - OOP - 18.01.24.cpp
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(35,18): warning C4267: =: преобразование из "size_t" в "unsigned int"; возможна потеря данных
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(138,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(164,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(175,27): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(246,21): warning C4018: <: несоответствие типов со знаком и без знака
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(421,17): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24\CLASS WORK - OOP - 18.01.24.cpp(435,42): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  CLASS WORK - OOP - 18.01.24.vcxproj -> D:\C++\C++ OOP\CLASS WORK - OOP - 18.01.24\x64\Debug\CLASS WORK - OOP - 18.01.24.exe
