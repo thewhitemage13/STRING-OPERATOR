@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <algorithm>
 #include <ctime>
 #include <regex>
@@ -28,7 +28,7 @@ public:
 		SetString(text, capacity);
 	}
 
-private:
+public:
 
 	void SetString(const char* text, unsigned int capacity = 80)
 	{
@@ -57,7 +57,10 @@ private:
 		strcpy_s(this->text, length + 1, text);
 	}
 
-public:
+	void Print()
+	{
+		cout << text << "\n";
+	}
 
 	~String()
 	{
@@ -92,7 +95,7 @@ public:
 				cout << "false" << "\n";
 				return false;
 			}
-				
+
 		}
 	}
 
@@ -155,7 +158,7 @@ public:
 				return i;
 			}
 		}
-		return -1; 
+		return -1;
 	}
 
 	void Remove(int start)
@@ -164,8 +167,8 @@ public:
 		if (start >= 0 && start < length)
 		{
 			memmove(text + start, text + start + 1, length - start);
-			length--;  
-			text[length] = '\0';  
+			length--;
+			text[length] = '\0';
 		}
 	}
 
@@ -175,8 +178,8 @@ public:
 		if (start >= 0 && start < length && count > 0)
 		{
 			memmove(text + start, text + start + count, length - start - count);
-			length -= count; 
-			text[length] = '\0'; 
+			length -= count;
+			text[length] = '\0';
 		}
 	}
 
@@ -198,7 +201,7 @@ public:
 	String ToLower()
 	{
 		//привод к нижнему регистру (в том числе и для кириллического текста)
-		_strlwr_s(text, 199); 
+		_strlwr_s(text, 199);
 		return text;
 	}
 
@@ -226,9 +229,9 @@ public:
 	void SortZA()
 	{
 		//сортировка всех символов строки в алфавитном порядке от я до а
-		sort(text, text + length, [](char a, char b) 
+		sort(text, text + length, [](char a, char b)
 			{
-			return tolower(a, locale()) > tolower(b, locale());
+				return tolower(a, locale()) > tolower(b, locale());
 			});
 		cout << text << "\n";
 	}
@@ -257,6 +260,7 @@ public:
 		/*char* copy = new char[length + 1];
 		strcpy_s(copy, length + 1, text);*/
 		String copy = text;
+
 		return text;
 	}
 
@@ -275,7 +279,7 @@ public:
 		text[0] = '\0';
 		length = 0;
 	}
-	
+
 	char GetCharIndex(unsigned int index) const
 	{
 		if (index < length)
@@ -284,7 +288,7 @@ public:
 		}
 		throw "incorrect index\n";
 	}
-	
+
 	void ShrinkToFit()
 	{
 		if (length + 1 <= capacity)
@@ -339,8 +343,24 @@ bool operator == (const String& a, const String& b)
 	return strcmp(a.text, b.text) == 0;
 }
 
+istream& operator>>(istream& i, String& str) 
+{
+	cout << "Enter text: ";
+	char txt[100];
+	i.getline(txt, sizeof(txt));
+	str.SetString(txt);
+	return i;
+}
+
+ostream& operator<<(ostream& i, const String& str) 
+{
+	cout << str.GetString();
+	return cout;
+}
+
 int main()
 {
+
 	//srand(time(0));
 	//String a("Sasha");
 	//String b("ALEX");
@@ -367,36 +387,42 @@ int main()
 	////a.RandomFill();	
 
 
-	String a("S");
-	String b("Sasha");
-	
-	if (a == b)
-	{
-		cout << "==\n";
-	}
+	//String a("S");
+	//String b("Sasha");
 
-	if (a > b)
-	{
-		cout << ">\n";
-	}
+	//if (a == b)
+	//{
+	//	cout << "==\n";
+	//}
 
-	if (a < b)
-	{
-		cout << "<\n";
-	}
+	//if (a > b)
+	//{
+	//	cout << ">\n";
+	//}
 
-	if (a >= b)
-	{
-		cout << ">=\n";
-	}
+	//if (a < b)
+	//{
+	//	cout << "<\n";
+	//}
 
-	if (a <= b)
-	{
-		cout << "<=\n";
-	}
+	//if (a >= b)
+	//{
+	//	cout << ">=\n";
+	//}
 
-	if (a != b)
-	{
-		cout << "!=\n";
-	}
+	//if (a <= b)
+	//{
+	//	cout << "<=\n";
+	//}
+
+	//if (a != b)
+	//{
+	//	cout << "!=\n";
+	//}
+
+
+	String s;
+	cin >> s;
+	cout << s;
+
 }
